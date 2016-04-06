@@ -3,8 +3,8 @@
     <head>
 	<title>Rerum Consortium</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-<link href="http://fonts.googleapis.com/css?family=Raleway:100,300,500" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+        <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,500" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="app/app.css" media="all">
 	<style type="text/css">
@@ -51,13 +51,14 @@
                 }
         </style>
 </head>
-<body>
+<body ng-controller="mainController">
     <header class="navbar">
-        <div class="navbar-header">
-                <h1 class="navbar-brand"><i class="fa fa-cubes"></i> rerum</h1>
-            </div>
+        <a class="navbar-header text-muted" href="#welcome">
+            <h1 class="navbar-brand"><i class="fa fa-cubes"></i> rerum</h1>
+        </a>
         <nav class="nav pull-right nav-inline">
             <div class="nav-item dropdown">
+                <a class="nav-link" href="#annotation">Annotation</a>
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Resources</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Text</a>
@@ -77,8 +78,13 @@
         <a href="#" class="btn btn-link">About</a>
         <a href="#" class="btn btn-link">Join</a>
         <a href="#" class="btn btn-link">Acknowledgments</a>
-    </footer>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="libs/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" ></script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-touch.min.js"></script>
@@ -95,8 +101,10 @@
         function ($routeProvider, $locationProvider, Edition) {
             $routeProvider
                 .when('/welcome', {
-                    templateUrl: 'partials/front.html',
-                    controller: 'mainController',
+                    templateUrl: 'partials/front.html'
+                })
+                .when('/annotation', {
+                    templateUrl: 'partials/annotation.html'
                 })
                 .otherwise({redirectTo: '/welcome'})
         }])
