@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html ng-app="consortium">
+    <head>
 	<title>Rerum Consortium</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
 <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,500" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="app/app.css" media="all">
@@ -56,173 +56,54 @@
         <div class="navbar-header">
                 <h1 class="navbar-brand"><i class="fa fa-cubes"></i> rerum</h1>
             </div>
-            <nav class="nav pull-right nav-inline">
-                <a class="nav-link" href="#">Text</a>
-                <a class="nav-link" href="#">Image</a>
-                <a class="nav-link disabled" href="#">Audio</a>
-                <a class="nav-link disabled" href="#">Video</a>
-                <a class="nav-link disabled" href="#">3D</a>
-                <a class="nav-link" href="#">Consortium</a>
+        <nav class="nav pull-right nav-inline">
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Resources</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Text</a>
+                    <a class="dropdown-item" href="#">Image</a>
+                    <a class="dropdown-item disabled" href="#">Audio</a>
+                    <a class="dropdown-item disabled" href="#">Video</a>
+                    <a class="dropdown-item disabled" href="#">3D</a>
+                </div>
+            </div>
+                <a class="nav-link" href="#">Community</a>
                 <a class="nav-link" href="#">News</a>
             </nav>
     </header>
-		<div>
-                    <action-box class="text-xs-center m-b-1">
-                        <img src="media/tmp_Kevin_Oliver.jpg" class="backdrop" style="top:-30vw;" />
-                        <div class="container">
-                            <div class="card card-block">
-                                <h3 class="card-title">
-                                    <span style="white-space: nowrap;">Developing the </span>
-                                    <span style="white-space: nowrap;">World's Data</span>
-                                    <span style="white-space: nowrap;">through Collaboration</span>
-                                </h3>
-                                <p class="card-text">Visit St. Louis and be part of the conversation in our inaugural workgroup on text resources.</p>
-                                <a class="btn btn-primary" href="about.html">Join Us</a>
-                            </div>
-                        </div>
-                    </action-box>
-                </div>
-                <div class="container">
-                    <div class="card-deck-wrapper text-xs-center m-b-1">
-                        <div class="card-deck">
-                            <div class="card card-block">
-                                <h4 class="card-title">
-                                    <i class="fa fa-3x fa-file-text-o"></i>
-                                </h4>
-                                <a class="btn btn-link btn-block" href="#">
-                                    Clear Standards
-                                </a>
-                                <p class="card-text">
-                                    The most used standards should be the most useful.
-                                </p>
-                            </div>
-                            <div class="card card-block">
-                                <h4 class="card-title">
-                                    <i class="fa fa-3x fa-users"></i>
-                                </h4>
-                                <a class="btn btn-link btn-block" href="#">
-                                    Engaged Developers
-                                </a>
-                                <p class="card-text">
-                                    Great people stand on each others'&nbsp;shoulders.
-                                </p>
-                            </div>
-                            <div class="card card-block">
-                                <h4 class="card-title">
-                                    <i class="fa fa-3x fa-cogs"></i>
-                                </h4>
-                                <a class="btn btn-link btn-block" href="#">
-                                    Universal Tools
-                                </a>
-                                <p class="card-text">
-                                    Open and nonspecialized should not be uncommon.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <p>
-                            The <abbr title="Reconditorium Eximium Rerum Universalium Mutabiliumque">Rerum</abbr> Consortium provides Digital Humanities software
-                            solutions for increased interoperability and access.  Rerum
-                            tools and services are designed to ensure free and open
-                            sharing of data. Central to Rerum are OAC and IIIF as models
-                            for living digital objects for data interchange.  The Rerum
-                            architecture facilitates the useful development of specific
-                            tools and interfaces without requiring scholars to have deep
-                            control over the underlying format.
-                        </p>
-                        <h3>
-                            <i class="fa fa-external-link"></i>
-                            The Story of Annotation
-                        </h3>
-                        <p>
-                            <img alt="OAC annotation" class="pull-right" style="max-width:30vw;"
-                                 src="http://www.openannotation.org/spec/core/images/intro_model.png" />
-                            The Open Annotation Collaboration broke important ground on
-                            08 February 2013, when they specified an interoperable framework
-                            for creating associations between related resources, annotations,
-                            using a methodology that conforms to the Architecture of the World
-                            Wide Web.<sup>
-                                <a href="http://www.openannotation.org/spec/core/20130208/index.html"
-                                   target="_blank"><i class="fa fa-external-link"></i></a>
-                            </sup>
-                            The next year, SharedCanvas (later absorbed by IIIF), demonstrated
-                            how simply <abbr title="Open Annotation Collaboration">OAC</abbr> could be
-                            extended to point to complex objects.
-                        </p>
-                        <p>
-                            Pointing, instead of directly encoding annotations and
-                            <dfn title="comments, edits, links...">annotation-like objects</dfn>
-                            provides benefits for scholarship by separating the resource from
-                            the annotation, allowing for more granular and irregular resources,
-                            and creating a clearer history of the academic conversation.
-                            By separating the resource (text, image, etc.) from the
-                            annotation, the original digitized resource remains pristine and
-                            can be located anywhere in the world. Selectors remove the need
-                            for every reference to be to a complete resource while also
-                            allowing a scholar to make a very specific annotation on a
-                            smaller range of the original resource, whether or not it
-                            has native segmentation within it. Finally, every annotation
-                            can be individually attributed to the asserting scholar and
-                            software, which makes filtering and walking back through the
-                            revisions a simpler process.
-                        </p>
-                        <h3>
-                            <i class="fa fa-file-text-o"></i>
-                            Realizing Digital Resources
-                        </h3>
-                        <p>
-                            Early facsimiles, transcriptions, and photographs tended to either
-                            have very little connection to the real objects they depicted, or completely
-                            stood in for them as a digital replacement. The IIIF Presentation
-                            API clearly respects the role of the resource as a surrogate, while
-                            normalizing the digital containers for these resources.
-                        </p>
-                        <p>
-                            The Rerum Consortium expands this effort by imagining digital containers
-                            beyond the Canvases and Manifests of IIIF to include useful objects for
-                            other media, such as audio, video, and three-dimensional models. In this
-                            way, advances in annotation standards can be applied to a wider set of
-                            resources and, importantly, these resources can be related to or
-                            described in terms of each other.
-                        </p>
-                    </div>
-                    <h3>
-                        <i class="fa fa-code"></i>
-                        A Developing Need
-                    </h3>
-                    <p>
-                        Increasingly, scholars have expended time and money developing specialized
-                        programs or learning new programming languages in order to address their
-                        research questions successfully. Cataloguers who have already learned to
-                        speak a scholarly vocabulary and then describe objects with a carefully
-                        controlled schema are now being asked to understand the web ontology and
-                        data exchange formats. It would feel nonsensical to ask a librarian to
-                        establish the standard width for drawers in a card catalog or the height
-                        of a reference desk. Likewise, Digital Humanities should be offering tools
-                        that enforce standards by default and allow users to choose the motivation
-                        for the task. The conventional approach of encoding resources closer to
-                        the bare metal is fraught with misinterpretation and syntax errors.
-                    </p>
-                    <p>
-                        Digital Humanities needs developers the way libraries need electricians and
-                        plumbers. Digital tools should support the standards of interoperability
-                        and digital transmission invisibly and responsibly enforce the scholarly
-                        standards for description, classification, and attribution. The best mind to
-                        address challenging research questions should not be required to also be
-                        the best mind in command-line programming, but work in concert with tools
-                        which accelerate analysis, automate encoding, and translate normal scholarly
-                        behavior into rich digital assets.
-                    </p>
-                </div>
-    <footer class="text-xs-center">
+<ng-view></ng-view>
+<footer class="text-xs-center">
         <a href="https://groups.google.com/forum/#!forum/rerum-general" target="_blank" class="btn btn-link">Discuss</a>
         <a href="#" class="btn btn-link">About</a>
         <a href="#" class="btn btn-link">Join</a>
         <a href="#" class="btn btn-link">Acknowledgments</a>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="libs/tether.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-touch.min.js"></script>
+
+    <script src="https://oblador.github.io/angular-scroll/0.6.2/angular-scroll.min.js"></script>
+    <script src="https://oblador.github.io/angular-parallax/angular-parallax.min.js"></script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.1/ui-bootstrap.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.1/ui-bootstrap-tpls.js"></script>
+
+    <script>
+    var rc = angular.module('consortium',['ngAnimate','ui.bootstrap','duParallax','ngRoute'])
+        .config(['$routeProvider',
+        function ($routeProvider, $locationProvider, Edition) {
+            $routeProvider
+                .when('/welcome', {
+                    templateUrl: 'partials/front.html',
+                    controller: 'mainController',
+                })
+                .otherwise({redirectTo: '/welcome'})
+        }])
+        .controller('mainController', function($scope, parallaxHelper){
+    $scope.background = parallaxHelper.createAnimator(-0.68);
+  }
+);
+            </script>
 </body>
 </html>
