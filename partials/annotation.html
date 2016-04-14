@@ -7,7 +7,7 @@
             much has been asserted. There should be no boundaries in their generation,
             encoding, or storage.
         </p>
-        <h2>Generating Annotations</h2>
+        <h2 id="ga">Generating Annotations</h2>
         <p>
             <span class="lead">Designers make tools for scholars.</span> A programmer
             will transform user inputs into encoded data, but when a scholar is
@@ -43,13 +43,17 @@
             <a class="btn btn-secondary" href="">Annotation project gallery</a>
         <a class="btn btn-secondary" href="">Visit the Cookbook</a>
         </p>
-        <h2>Encoding Annotations</h2>
+        <h2 id="ea">Encoding Annotations</h2>
         <p>
             <span class="lead">First, do no harm.</span> Unencoded data runs the risk
             of isolating itself, but poorly encoded data loose in the wild can contaminate
-            large datasets and degrade the community's confidence in the hosting institution.
+            large datasets and degrade confidence in the hosting institution. Please
+            recognize that the data model encoding the content of a resource is a separate
+            concern from the encoding format and model for storing data. This consortium
+            expects text-based annotations to be deliverable as JSON-LD, but recognizes
+            that other text formats, such as TTL and XML are often used.
         </p>
-        <h2>Storing Annotations</h2>
+        <h2 id="sa">Storing Annotations</h2>
         <p>
             <span class="lead">Finders, keepers.</span> Anyone who wants to can host
             open data. The beauty of it is that because each annotation is attributed
@@ -59,6 +63,10 @@
         </p>
     </div>
     <div class="col-md-3 col-sm-12">
+        <h5>About Annotations</h5>
+        <a href="#ga" class="btn-block" du-smooth-scroll>Generating</a>
+        <a href="#ea" class="btn-block" du-smooth-scroll>Encoding</a>
+        <a href="#sa" class="btn-block" du-smooth-scroll>Storing</a>
         <h5>Recent Conversations</h5>
         <ul>
             <li>recent posts</li>
