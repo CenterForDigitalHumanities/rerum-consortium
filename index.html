@@ -123,16 +123,15 @@
         .value('gUser',{})
         .controller('mainController', function($scope, $anchorScroll, parallaxHelper,gUser){
     $scope.background = parallaxHelper.createAnimator(-0.68);
-    var profile = googleUser.getBasicProfile();
-    gUser = {
-        name:profile.getName(),
-        URL:profile.getImageUrl(),
-        email:profile.getEmail()
-    };
   }
 );
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
+    rc.value('gUser',{
+        name:profile.getName(),
+        URL:profile.getImageUrl(),
+        email:profile.getEmail()
+    })
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
@@ -142,6 +141,7 @@ function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
       console.log('User signed out.');
+          rc.value('gUser',{});
     });
   }
             </script>
