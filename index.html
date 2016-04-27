@@ -2,6 +2,7 @@
 <html ng-app="consortium">
     <head>
 	<title>Rerum Consortium</title>
+<meta name="google-signin-client_id" content="116659930543-0bvnksvurfm8gfg3ga486k74uvfh1im9.apps.googleusercontent.com">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
         <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,500" rel="stylesheet" type="text/css">
@@ -78,6 +79,8 @@
                 <a class="nav-link" href="#">Community</a>
                 <a class="nav-link" href="#">News</a>
             </nav>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<a href="#" onclick="signOut();" ng-show="gUser.name">Sign out</a>
     </header>
 <ng-view></ng-view>
 <footer class="text-xs-center">
@@ -103,7 +106,7 @@
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.1/ui-bootstrap.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.1/ui-bootstrap-tpls.js"></script>
-
+<script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
     var rc = angular.module('consortium',['ngAnimate','ui.bootstrap','duParallax','ngRoute','duScroll'])
         .config(['$routeProvider',
@@ -117,10 +120,30 @@
                 })
                 .otherwise({redirectTo: '/welcome'})
         }])
-        .controller('mainController', function($scope, $anchorScroll, parallaxHelper){
+        .value('gUser',{})
+        .controller('mainController', function($scope, $anchorScroll, parallaxHelper,gUser){
     $scope.background = parallaxHelper.createAnimator(-0.68);
+    var profile = googleUser.getBasicProfile();
+    gUser = {
+        name:profile.getName(),
+        URL:profile.getImageUrl(),
+        email:profile.getEmail()
+    };
   }
 );
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+}
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
             </script>
 </body>
 </html>
