@@ -81,6 +81,7 @@
             </nav>
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
 <a href="#" onclick="signOut();" ng-show="gUser.name">Sign out</a>
+{{gUser.name}}
     </header>
 <ng-view></ng-view>
 <footer class="text-xs-center">
@@ -123,6 +124,7 @@
         .value('gUser',{})
         .controller('mainController', function($scope, $anchorScroll, parallaxHelper,gUser){
     $scope.background = parallaxHelper.createAnimator(-0.68);
+$scope.gUser = gUser;
   }
 );
 function onSignIn(googleUser) {
