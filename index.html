@@ -81,7 +81,11 @@
             </nav>
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
 <a href="#" onclick="signOut();" ng-show="gUser.name">Sign out</a>
-{{gUser.name}}
+<span ng-if="gUser.URL">
+    {{gUser.name}}
+    <img ng-src="gUser.URL" />
+</span>
+
     </header>
 <ng-view></ng-view>
 <footer class="text-xs-center">
