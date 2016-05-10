@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html ng-app="consortium">
-    <head>
+<head>
 	<title>Rerum Consortium</title>
-<meta name="google-signin-client_id" content="116659930543-0bvnksvurfm8gfg3ga486k74uvfh1im9.apps.googleusercontent.com">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-        <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,500" rel="stylesheet" type="text/css">
+    <meta name="google-signin-client_id" content="116659930543-0bvnksvurfm8gfg3ga486k74uvfh1im9.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,500" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="app/app.css" media="all">
-	<style type="text/css">
-		body {
-			font-family: 'Open Sans', sans-serif;
-			color:#979A9E;
-			background-color: #2F353E;
-		}
-		h1,h2,h3,h4,h5,h6,.btn{
-			font-family: 'Raleway', sans-serif;
-		}
-		h1,h2,h3,h4,h5,h6{
-			font-weight: 300;
-		}
-                header {
-                    background: #0F151E;
-                }
-                action-box {
-                    display: block;
-                    position: relative;
-                    min-height: 12rem;
-                    overflow: hidden;
-                    color: #222;
-                }
-                action-box .backdrop {
-                    width:100%;
-                    min-width: 100%;
-                    position: absolute;
-                    top:0;left:0;
-                    z-index: -1;
-                }
-                action-box .card {
-                    background: rgba(255,255,255,.7);
-                    min-width:20rem;
-                    margin: 2rem auto;
-                    width: 50vw;
-                }
-                footer {
-                    margin-top: 2rem;
-                    background: linear-gradient(to bottom,#2F353E, #0F151E);
-                }
-                .card {
-                    background: rgba(255,255,255,.9);
-                }
-                code {
-                    color: #ED7177;
-                    background-color: #202427;
-                }
-        </style>
+    <link rel="stylesheet" href="app/app.css" media="all">
+    <style type="text/css">
+    body {
+     font-family: 'Open Sans', sans-serif;
+     color:#979A9E;
+     background-color: #2F353E;
+ }
+ h1,h2,h3,h4,h5,h6,.btn{
+     font-family: 'Raleway', sans-serif;
+ }
+ h1,h2,h3,h4,h5,h6{
+     font-weight: 300;
+ }
+ header {
+    background: #0F151E;
+}
+action-box {
+    display: block;
+    position: relative;
+    min-height: 12rem;
+    overflow: hidden;
+    color: #222;
+}
+action-box .backdrop {
+    width:100%;
+    min-width: 100%;
+    position: absolute;
+    top:0;left:0;
+    z-index: -1;
+}
+action-box .card {
+    background: rgba(255,255,255,.7);
+    min-width:20rem;
+    margin: 2rem auto;
+    width: 50vw;
+}
+footer {
+    margin-top: 2rem;
+    background: linear-gradient(to bottom,#2F353E, #0F151E);
+}
+.card {
+    background: rgba(255,255,255,.9);
+}
+code {
+    color: #ED7177;
+    background-color: #202427;
+}
+</style>
 </head>
 <body ng-controller="mainController">
     <header class="navbar">
@@ -76,32 +76,32 @@
                     <a class="dropdown-item disabled" href="#">3D</a>
                 </div>
             </div>
-                <a class="nav-link" href="#">Community</a>
-                <a class="nav-link" href="#">News</a>
-            </nav>
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
-<a href="#" onclick="signOut();" ng-show="gUser.name">Sign out</a>
-<span ng-if="gUser.URL">
-    {{gUser.name}}
-    <img ng-src="gUser.URL" />
-</span>
+            <a class="nav-link" href="#community">Community</a>
+            <a class="nav-link" href="#">News</a>
+        </nav>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="#" onclick="signOut();" ng-show="gUser.name">Sign out</a>
+        <span ng-if="gUser.URL">
+            {{gUser.name}}
+            <img ng-src="gUser.URL" />
+        </span>
 
     </header>
-<ng-view></ng-view>
-<footer class="text-xs-center">
+    <ng-view></ng-view>
+    <footer class="text-xs-center">
         <a href="https://groups.google.com/forum/#!forum/rerum-general" target="_blank" class="btn btn-link">Discuss</a>
-        <a href="#" class="btn btn-link">About</a>
+        <a href="#about" class="btn btn-link">About</a>
         <a href="#" class="btn btn-link">Join</a>
         <a href="#" class="btn btn-link">Acknowledgments</a>
         <a href="http://165.134.241.141/rerum" class="btn btn-link">API</a>
         <a href="http://165.134.241.141/annotationstore" class="btn btn-link">Server Registration</a>
-</footer>
+    </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="libs/tether.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="libs/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" ></script>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-touch.min.js"></script>
@@ -111,45 +111,59 @@
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.1/ui-bootstrap.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.1/ui-bootstrap-tpls.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
     var rc = angular.module('consortium',['ngAnimate','ui.bootstrap','duParallax','ngRoute','duScroll'])
-        .config(['$routeProvider',
+    .config(['$routeProvider',
         function ($routeProvider, $locationProvider, Edition) {
             $routeProvider
-                .when('/welcome', {
-                    templateUrl: 'partials/front.html'
-                })
-                .when('/annotation', {
-                    templateUrl: 'partials/annotation.html'
-                })
-                .otherwise({redirectTo: '/welcome'})
+            .when('/welcome', {
+                templateUrl: 'partials/front.html'
+            })
+            .when('/annotation', {
+                templateUrl: 'partials/annotation.html'
+            })
+            .when('/development', {
+                templateUrl: 'partials/development.html'
+            })
+            .when('/standards', {
+                templateUrl: 'partials/standards.html'
+            })
+            .when('/about', {
+                templateUrl: 'partials/about.html'
+            })
+            .when('/tools', {
+                templateUrl: 'partials/tools.html'
+            })
+            .when('/community', {
+                templateUrl: 'partials/community.html'
+            })
+            .otherwise({redirectTo: '/welcome'})
         }])
-        .value('gUser',{})
-        .controller('mainController', function($scope, $anchorScroll, parallaxHelper,gUser){
-    $scope.background = parallaxHelper.createAnimator(-0.68);
-$scope.gUser = gUser;
-  }
-);
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-    rc.value('gUser',{
-        name:profile.getName(),
-        URL:profile.getImageUrl(),
-        email:profile.getEmail()
-    })
+    .value('gUser',{})
+    .controller('mainController', function($scope, $anchorScroll, parallaxHelper,gUser){
+        $scope.background = parallaxHelper.createAnimator(-0.68);
+        $scope.gUser = gUser;
+        $scope.onSignIn=function(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          gUser = {
+            name:profile.getName(),
+            URL:profile.getImageUrl(),
+            email:profile.getEmail()
+        };
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail());
 }
-function signOut() {
+$scope.signOut=function() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
       console.log('User signed out.');
-          rc.value('gUser',{});
-    });
-  }
-            </script>
+      gUser={};
+  });
+}
+});
+    </script>
 </body>
 </html>
