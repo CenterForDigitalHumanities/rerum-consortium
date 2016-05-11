@@ -169,11 +169,11 @@ $scope.signOut=function() {
   });
 }
 function getRanges(){
- var properties={"@type" : "sc:Range"};
- var url="http://165.134.241.141/brokenBooks/getAnnotationByPropertiesServlet";
+ var properties={"@type" : "oa:Annotation"};
+ var url="http://165.134.241.141/annotationstore/anno/getAnnotationByProperties.action";
  var params = {"content" : JSON.stringify(properties)};
  $http.post(url, params).then(function(data){
-    console.log("Got ranges:"+data);
+    console.log("Got annos:"+data);
     $scope.rangeCollection = JSON.parse(data);
  },function(){
     // error
