@@ -169,7 +169,6 @@ $scope.signOut=function() {
   });
 }
 function getRanges(){
- var forProject = detectWho();
  var properties={"@type" : "sc:Range"};
  var url="http://165.134.241.141/brokenBooks/getAnnotationByPropertiesServlet";
  var params = {"content" : JSON.stringify(properties)};
