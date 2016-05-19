@@ -85,7 +85,7 @@ code {
             <a class="nav-link" href="#community">Community</a>
             <a class="nav-link" href="#">News</a>
         </nav>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div class="g-signin2 ng-hide" data-onsuccess="onSignIn"></div>
         <a href="#" onclick="signOut();" ng-show="gUser.name">Sign out</a>
         <span ng-if="gUser.URL">
             {{gUser.name}}
