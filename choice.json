@@ -2,10 +2,6 @@
     "@context": "http://iiif.io/api/presentation/2/context.json",
     "@type": "sc:Manifest",
     "label": "New Manifest",
-    "resources": [
-    ],
-    "metadata": [
-    ],
     "sequences": [
         {
             "@id": "normal sequence",
